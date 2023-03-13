@@ -28,29 +28,33 @@ import { SiMaterialUi, SiNodeRed } from "react-icons/si";
 
 // HeroSection
 
-export const Name = "Suraaj Hasija";
+export const Name = "Nishant Saxena";
 
 export const MainSkills = [
-    "a Data Scientist💻",
+    "a Web Developer💻",
     1000,
-    "an ML Engineer👨‍💻",
+    "a Computer Engineer👨‍💻",
     1000,
     "an Open Source Contributor",
     1000,
+    "a ML enthusiast📖",
+    1000,
 ];
 
-export const githubURL = "https://github.com/gitsuraaj";
+export const githubURL = "https://github.com/phoenixx1";
 
-export const linkedinURL = "https://www.linkedin.com/in/suraajhasija/";
+export const linkedinURL = "https://www.linkedin.com/in/nishant-saxena-2609/";
 
-export const mailtoURL = "mailto:mailbox.suraaj@gmail.com";
+export const mailtoURL = "mailto:nishantsaxena269@gmail.com";
 
+export const fbURL = "https://www.facebook.com/N.S.T.G.21";
 
-export const instagramURL = "https://www.instagram.com/i_suraaj/";
+export const instagramURL = "https://www.instagram.com/nishant_21_/";
 
+export const mediumURL = "https://medium.com/@nishantsaxena269";
 
 export const resumeURL =
-    "";
+    "https://drive.google.com/file/d/1a8OEERo6VZbneOW52PRN19rJ34k89_ZI/view?usp=sharing";
 
 // Skills
 
@@ -61,22 +65,52 @@ export const Languages = [
     },
     {
         icon: <SiJavascript className="icon" />,
-        name: "SQL",
+        name: "Javascript",
     },
     {
         icon: <SiC className="icon" />,
-        name: "Tableau",
+        name: "C",
     },
     {
         icon: <SiCplusplus className="icon" />,
-        name: "Dataiku",
+        name: "C++",
     },
     {
         icon: <SiTypescript className="icon" />,
-        name: "AWS",
+        name: "Typescript",
     },
 ];
 
+export const FrontendTools = [
+    {
+        icon: <SiHtml5 className="icon" />,
+        name: "HTML5",
+    },
+    {
+        icon: <SiCss3 className="icon" />,
+        name: "Css3",
+    },
+    {
+        icon: <SiReact className="icon" />,
+        name: "ReactJS",
+    },
+    {
+        icon: <SiStyledComponents className="icon" />,
+        name: "Styled-components",
+    },
+    {
+        icon: <DiSass className="icon" />,
+        name: "Sass",
+    },
+    {
+        icon: <SiRedux className="icon" />,
+        name: "Redux",
+    },
+    {
+        icon: <SiBootstrap className="icon" />,
+        name: "Bootstrap",
+    },
+];
 
 export const BackendTools = [
     {
@@ -97,7 +131,7 @@ export const BackendTools = [
     },
     {
         icon: <SiKubernetes className="icon" />,
-        name: "ECS",
+        name: "Kubernetes",
     },
     {
         icon: <SiHeroku className="icon" />,
@@ -105,9 +139,12 @@ export const BackendTools = [
     },
     {
         icon: <DiMysql className="icon" />,
-        name: "BigQuery",
+        name: "MySQL",
     },
-,
+    {
+        icon: <SiMongodb className="icon" />,
+        name: "MongoDB",
+    },
 ];
 
 // Experience
