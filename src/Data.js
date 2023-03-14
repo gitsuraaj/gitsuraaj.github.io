@@ -20,6 +20,7 @@ import {
 } from "react-icons/si";
 import { DiMysql, DiSass } from "react-icons/di";
 import { FaNode } from "react-icons/fa";
+import React from 'react'
 
 import { FaSchool } from "react-icons/fa";
 import { MdSchool, MdWork } from "react-icons/md";
@@ -28,7 +29,7 @@ import { SiMaterialUi, SiNodeRed } from "react-icons/si";
 
 // HeroSection
 
-export const Name = "Nishant Saxena";
+export const Name = "Suraaj Hasija";
 
 export const MainSkills = [
     "a Web Developer💻",

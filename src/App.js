@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Sidebar from "./components/Sidebar";
 import Skills from "./components/Skills";
+import React from 'react'
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
