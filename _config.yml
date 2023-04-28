@@ -21,9 +21,6 @@ author: Suraaj
 
 navbar-links:
   About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
   Author's home: "https://www.linkedin.com/in/suraajhasija/"
 
 ################
