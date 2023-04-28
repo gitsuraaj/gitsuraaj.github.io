@@ -1,10 +1,9 @@
 ---
 layout: post
 title: How Much Optimisation is too much Optimization?
-subtitle: This blog post is all about Bump's Supremacy
-gh-repo: gitsuraaj
+subtitle: This blog post is all about Numpy's Supremacy
 gh-badge: [star, fork, follow]
-tags: [test]
+tags: [datascience]
 comments: true
 ---
 
