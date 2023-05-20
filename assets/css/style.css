@@ -149,7 +149,7 @@ h6 {
 }
 
 #header .logo img {
-  max-height: 40px;
+  max-height: 80px;
 }
 
 /*--------------------------------------------------------------
@@ -1549,4 +1549,8 @@ section {
   text-align: center;
   font-size: 13px;
   color: #fff;
+}
+
+.someDiv {
+    display:none;
 }
