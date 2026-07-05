@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suraaj Hasija - Machine Learning · Generative AI · Data Science</title>
+  <meta name="description" content="Suraaj Hasija - Manager, AI Center of Excellence. Building Machine Learning and Generative AI systems that move business metrics, and teaching data science to 120,000+ learners. Selected work, experience, and consulting." />
+  <meta name="author" content="Suraaj Hasija" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Suraaj Hasija - Machine Learning · Generative AI · Data Science" />
+  <meta property="og:description" content="Turning complex AI into business impact and industry-ready skills for 120,000+ learners." />
+
+  <!-- Favicon (inline SVG monogram) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230e0c0b'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='58' font-weight='700' fill='%23d1653f' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Grain / texture overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Brand logo sprite (referenced inline via <use>) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="ic-mastercard" viewBox="0 0 24 24"><path d="M11.343 18.031c.058.049.12.098.181.146-1.177.783-2.59 1.238-4.107 1.238C3.32 19.416 0 16.096 0 12c0-4.095 3.32-7.416 7.416-7.416 1.518 0 2.931.456 4.105 1.238-.06.051-.12.098-.165.15C9.6 7.489 8.595 9.688 8.595 12c0 2.311 1.001 4.51 2.748 6.031zm5.241-13.447c-1.52 0-2.931.456-4.105 1.238.06.051.12.098.165.15C14.4 7.489 15.405 9.688 15.405 12c0 2.31-1.001 4.507-2.748 6.031-.058.049-.12.098-.181.146 1.177.783 2.588 1.238 4.107 1.238C20.68 19.416 24 16.096 24 12c0-4.094-3.32-7.416-7.416-7.416zM12 6.174c-.096.075-.189.15-.28.231C10.156 7.764 9.169 9.765 9.169 12c0 2.236.987 4.236 2.551 5.595.09.08.185.158.28.232.096-.074.189-.152.28-.232 1.563-1.359 2.551-3.359 2.551-5.595 0-2.235-.987-4.236-2.551-5.595-.09-.08-.184-.156-.28-.231z"/></symbol>
+    <symbol id="ic-google" viewBox="0 0 24 24"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></symbol>
+    <symbol id="ic-barclays" viewBox="0 0 24 24"><path d="M21.043 3.629a3.235 3.235 0 0 0-1.048-.54 3.076 3.076 0 0 0-.937-.144h-.046c-.413.006-1.184.105-1.701.71a1.138 1.138 0 0 0-.226 1.023.9.9 0 0 0 .555.63s.088.032.228.058c-.04.078-.136.214-.136.214-.179.265-.576.612-1.668.612h-.063c-.578-.038-1.056-.189-1.616-.915-.347-.45-.523-1.207-.549-2.452-.022-.624-.107-1.165-.256-1.6-.1-.29-.333-.596-.557-.742a2.55 2.55 0 0 0-.694-.336c-.373-.12-.848-.14-1.204-.146-.462-.01-.717.096-.878.292-.027.033-.032.05-.068.046-.084-.006-.272-.006-.328-.006-.264 0-.498.043-.721.09-.47.1-.761.295-1.019.503-.12.095-.347.365-.399.653a.76.76 0 0 0 .097.578c.14-.148.374-.264.816-.266.493-.002 1.169.224 1.406.608.336.547.27.99.199 1.517-.183 1.347-.68 2.048-1.783 2.203-.191.026-.38.04-.56.04-.776 0-1.34-.248-1.63-.716a.71.71 0 0 1-.088-.168s.087-.021.163-.056c.294-.14.514-.344.594-.661.09-.353.004-.728-.23-1.007-.415-.47-.991-.708-1.713-.708-.4 0-.755.076-.982.14-.908.256-1.633.947-2.214 2.112-.412.824-.7 1.912-.81 3.067-.11 1.13-.056 2.085.019 2.949.124 1.437.363 2.298.708 3.22a15.68 15.68 0 0 0 1.609 3.19c.09-.094.15-.161.308-.318.188-.19.724-.893.876-1.11.19-.27.51-.779.664-1.147l.15.119c.16.127.252.348.249.592-.003.215-.053.464-.184.922a8.703 8.703 0 0 1-.784 1.818c-.189.341-.27.508-.199.584.015.015.038.03.06.026.116 0 .34-.117.585-.304.222-.17.813-.672 1.527-1.675a15.449 15.449 0 0 0 1.452-2.521c.12.046.255.101.317.226a.92.92 0 0 1 .08.563c-.065.539-.379 1.353-.63 1.94-.425.998-1.208 2.115-1.788 2.877-.022.03-.163.197-.186.227.9.792 1.944 1.555 3.007 2.136.725.408 2.203 1.162 3.183 1.424.98-.262 2.458-1.016 3.184-1.424a17.063 17.063 0 0 0 3.003-2.134c-.05-.076-.13-.158-.183-.23-.582-.763-1.365-1.881-1.79-2.875-.25-.59-.563-1.405-.628-1.94-.028-.221-.002-.417.08-.565.033-.098.274-.218.317-.226.405.884.887 1.73 1.452 2.522.715 1.003 1.306 1.506 1.527 1.674.248.191.467.304.586.304a.07.07 0 0 0 .044-.012c.094-.069.017-.234-.183-.594a9.003 9.003 0 0 1-.786-1.822c-.13-.456-.18-.706-.182-.92-.004-.246.088-.466.248-.594l.15-.118c.155.373.5.919.665 1.147.15.216.685.919.876 1.11.156.158.22.222.308.32a15.672 15.672 0 0 0 1.609-3.19c.343-.923.583-1.784.707-3.222.075-.86.128-1.81.02-2.948-.101-1.116-.404-2.264-.81-3.068-.249-.49-.605-1.112-1.171-1.566z"/></symbol>
+    <symbol id="ic-amex" viewBox="0 0 24 24"><path d="M16.015 14.378c0-.32-.135-.496-.344-.622-.21-.12-.464-.135-.81-.135h-1.543v2.82h.675v-1.027h.72c.24 0 .39.024.478.125.12.13.104.38.104.55v.35h.66v-.555c-.002-.25-.017-.376-.108-.516-.06-.08-.18-.18-.33-.234l.02-.008c.18-.072.48-.297.48-.747zm-.87.407l-.028-.002c-.09.053-.195.058-.33.058h-.81v-.63h.824c.12 0 .24 0 .33.05.098.048.156.147.15.255 0 .12-.045.215-.134.27zM20.297 15.837H19v.6h1.304c.676 0 1.05-.278 1.05-.884 0-.28-.066-.448-.187-.582-.153-.133-.392-.193-.73-.207l-.376-.015c-.104 0-.18 0-.255-.03-.09-.03-.15-.105-.15-.21 0-.09.017-.166.09-.21.083-.046.177-.066.272-.06h1.23v-.602h-1.35c-.704 0-.958.437-.958.84 0 .9.776.855 1.407.87.104 0 .18.015.225.06.046.03.082.106.082.18 0 .077-.035.15-.08.18-.06.053-.15.07-.277.07zM0 0v10.096L.81 8.22h1.75l.225.464V8.22h2.043l.45 1.02.437-1.013h6.502c.295 0 .56.057.756.236v-.23h1.787v.23c.307-.17.686-.23 1.12-.23h2.606l.24.466v-.466h1.918l.254.465v-.466h1.858v3.948H20.87l-.36-.6v.585h-2.353l-.256-.63h-.583l-.27.614h-1.213c-.48 0-.84-.104-1.08-.24v.24h-2.89v-.884c0-.12-.03-.12-.105-.135h-.105v1.036H6.067v-.48l-.21.48H4.69l-.202-.48v.465H2.235l-.256-.624H1.4l-.256.624H0V24h23.786v-7.108c-.27.135-.613.18-.973.18H21.09v-.255c-.21.165-.57.255-.914.255H14.71v-.9c0-.12-.018-.12-.12-.12h-.075v1.022h-1.8v-1.066c-.298.136-.643.15-.928.136h-.214v.915h-2.18l-.54-.617-.57.6H4.742v-3.93h3.61l.518.602.554-.6h2.412c.28 0 .74.03.942.225v-.24h2.177c.202 0 .644.045.903.225v-.24h3.265v.24c.163-.164.508-.24.803-.24h1.89v.24c.194-.15.464-.24.84-.24h1.176V0H0zM21.156 14.955c.004.005.006.012.01.016.01.01.024.01.032.02l-.042-.035zM23.828 13.082h.065v.555h-.065zM23.865 15.03v-.005c-.03-.025-.046-.048-.075-.07-.15-.153-.39-.215-.764-.225l-.36-.012c-.12 0-.194-.007-.27-.03-.09-.03-.15-.105-.15-.21 0-.09.03-.16.09-.204.076-.045.15-.05.27-.05h1.223v-.588h-1.283c-.69 0-.96.437-.96.84 0 .9.78.855 1.41.87.104 0 .18.015.224.06.046.03.076.106.076.18 0 .07-.034.138-.09.18-.045.056-.136.07-.27.07h-1.288v.605h1.287c.42 0 .734-.118.9-.36h.03c.09-.134.135-.3.135-.523 0-.24-.045-.39-.135-.526zM18.597 14.208v-.583h-2.235V16.458h2.235v-.585h-1.57v-.57h1.533v-.584h-1.532v-.51M13.51 8.787h.685V11.6h-.684zM13.126 9.543l-.007.006c0-.314-.13-.5-.34-.624-.217-.125-.47-.135-.81-.135H10.43v2.82h.674v-1.034h.72c.24 0 .39.03.487.12.122.136.107.378.107.548v.354h.677v-.553c0-.25-.016-.375-.11-.516-.09-.107-.202-.19-.33-.237.172-.07.472-.3.472-.75zm-.855.396h-.015c-.09.054-.195.056-.33.056H11.1v-.623h.825c.12 0 .24.004.33.05.09.04.15.128.15.25s-.047.22-.134.266zM15.92 9.373h.632v-.6h-.644c-.464 0-.804.105-1.02.33-.286.3-.362.69-.362 1.11 0 .512.123.833.36 1.074.232.238.645.31.97.31h.78l.255-.627h1.39l.262.627h1.36v-2.11l1.272 2.11h.95l.002.002V8.786h-.684v1.963l-1.18-1.96h-1.02V11.4L18.11 8.744h-1.004l-.943 2.22h-.3c-.177 0-.362-.03-.468-.134-.125-.15-.186-.36-.186-.662 0-.285.08-.51.194-.63.133-.135.272-.165.516-.165zm1.668-.108l.464 1.118v.002h-.93l.466-1.12zM2.38 10.97l.254.628H4V9.393l.972 2.205h.584l.973-2.202.015 2.202h.69v-2.81H6.118l-.807 1.904-.876-1.905H3.343v2.663L2.205 8.787h-.997L.01 11.597h.72l.26-.626h1.39zm-.688-1.705l.46 1.118-.003.002h-.915l.457-1.12zM11.856 13.62H9.714l-.85.923-.825-.922H5.346v2.82H8l.855-.932.824.93h1.302v-.94h.838c.6 0 1.17-.164 1.17-.945l-.006-.003c0-.78-.598-.93-1.128-.93zM7.67 15.853l-.014-.002H6.02v-.557h1.47v-.574H6.02v-.51H7.7l.733.82-.764.824zm2.642.33l-1.03-1.147 1.03-1.108v2.253zm1.553-1.258h-.885v-.717h.885c.24 0 .42.098.42.344 0 .243-.15.372-.42.372zM9.967 9.373v-.586H7.73V11.6h2.237v-.58H8.4v-.564h1.527V9.88H8.4v-.507"/></symbol>
+  </svg>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#top" aria-label="Suraaj Hasija - home">
+      <span class="nav__dot" aria-hidden="true"></span>
+      suraaj.hasija
+    </a>
+    <nav class="nav__links mono" aria-label="Primary">
+      <a href="#work"><span>01</span> Work</a>
+      <a href="#craft"><span>02</span> What I Do</a>
+      <a href="#experience"><span>03</span> Path</a>
+      <a href="#about"><span>04</span> About</a>
+    </nav>
+    <a href="https://www.linkedin.com/in/suraajhasija" target="_blank" rel="noopener" class="nav__cta mono">Get in touch</a>
+    <button id="navToggle" class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main id="top">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero__grid">
+        <div class="hero__left">
+          <p class="status" data-reveal>
+            <span class="status__dot" aria-hidden="true"></span>
+            <span class="mono" id="heroGreeting">Open to speaking, advisory &amp; consulting</span>
+          </p>
+          <h1 class="hero__title" data-splitheading>
+            I turn complex <span class="accent">AI</span> into business impact - and into skills for <span class="accent">120,000+</span> people.
+          </h1>
+          <p class="hero__lede" data-reveal>
+            Manager - AI Center of Excellence. I build Machine Learning &amp; Generative&nbsp;AI systems that move real
+            business metrics - and I teach the people who build the next ones.
+          </p>
+          <div class="hero__actions" data-reveal>
+            <a href="#work" class="btn btn--primary">See the work <span aria-hidden="true">&rarr;</span></a>
+            <a href="https://www.linkedin.com/in/suraajhasija" target="_blank" rel="noopener" class="btn btn--ghost">Get in touch</a>
+          </div>
+          <ul class="hero__meta mono" data-reveal>
+            <li>AWS Certified AI Practitioner</li>
+            <li>Tableau Certified</li>
+            <li>Dataiku Core Designer</li>
+          </ul>
+        </div>
+
+        <aside class="hero__right" data-reveal>
+          <figure class="portrait">
+            <div class="portrait__frame">
+              <img id="headshot" src="assets/headshot.png" alt="Portrait of Suraaj Hasija" loading="eager"
+                   onerror="this.classList.add('is-missing')" />
+              <div class="portrait__mono" aria-hidden="true">SH</div>
+            </div>
+            <figcaption class="mono">
+              <span>Suraaj Hasija</span>
+              <span class="portrait__role">Machine Learning · GenAI · Data Science</span>
+            </figcaption>
+          </figure>
+        </aside>
+      </div>
+
+      <!-- Stat marquee -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>120,000+ learners trained</span><span class="marquee__dot">◆</span>
+          <span>$400K/yr fraud losses saved</span><span class="marquee__dot">◆</span>
+          <span>75% cohort certified</span><span class="marquee__dot">◆</span>
+          <span>Google for Startups instructor</span><span class="marquee__dot">◆</span>
+          <span>Barclays · American Express training</span><span class="marquee__dot">◆</span>
+          <span>120,000+ learners trained</span><span class="marquee__dot">◆</span>
+          <span>$400K/yr fraud losses saved</span><span class="marquee__dot">◆</span>
+          <span>75% cohort certified</span><span class="marquee__dot">◆</span>
+          <span>Google for Startups instructor</span><span class="marquee__dot">◆</span>
+          <span>Barclays · American Express training</span><span class="marquee__dot">◆</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SELECTED WORK ============ -->
+    <section class="section work" id="work">
+      <div class="section__head">
+        <p class="eyebrow mono" data-reveal>Selected Work</p>
+        <h2 class="section__title" data-reveal>Systems that moved the metric.</h2>
+        <a href="#contact" class="section__link mono" data-reveal>Discuss a project <span aria-hidden="true">&#8599;</span></a>
+      </div>
+
+      <!-- Flagship initiatives -->
+      <div class="featured">
+        <article class="feat" data-reveal>
+          <div class="feat__main">
+            <span class="feat__tag mono">Flagship &middot; In build</span>
+            <h3 class="feat__title">Agentic Decision Intelligence Platform
+              <span class="feat__sub">Next-Gen MAIA</span>
+            </h3>
+            <p class="feat__desc">A multi-agent AI ecosystem where specialized agents (Acceptance,
+              Commercial, Salesforce, Crypto, Merchant, Finance) collaborate autonomously to answer
+              complex business questions, run root-cause analysis, monitor KPIs, generate
+              recommendations, and trigger workflows.</p>
+            <span class="card__year mono co"><svg class="brandmark" aria-hidden="true"><use href="#ic-mastercard"></use></svg>Mastercard</span>
+          </div>
+          <ul class="impact" role="list">
+            <li><span class="impact__kpi">50-70%</span><span class="impact__label">less analyst effort on complex investigations</span></li>
+            <li><span class="impact__kpi">10k-20k+</span><span class="impact__label">hours saved annually across Product &amp; Analytics</span></li>
+            <li><span class="impact__kpi is-text">Days to minutes</span><span class="impact__label">faster enterprise decision-making</span></li>
+            <li><span class="impact__kpi">$1M-$3M</span><span class="impact__label">annual productivity opportunity at scale</span></li>
+          </ul>
+        </article>
+
+        <article class="feat" data-reveal>
+          <div class="feat__main">
+            <span class="feat__tag mono">Flagship &middot; Shipped</span>
+            <h3 class="feat__title">AI Marketplace
+              <span class="feat__sub">Reuse &amp; adoption engine</span>
+            </h3>
+            <p class="feat__desc">An internal AI Marketplace that democratizes discovery and adoption
+              of AI use cases, prompts, agents, and accelerators across Product, Data &amp; Analytics
+              teams, reducing duplication and accelerating reuse of AI solutions.</p>
+            <span class="card__year mono co"><svg class="brandmark" aria-hidden="true"><use href="#ic-mastercard"></use></svg>Mastercard</span>
+          </div>
+          <ul class="impact" role="list">
+            <li><span class="impact__kpi">$100K-$250K</span><span class="impact__label">annual productivity impact</span></li>
+            <li><span class="impact__kpi is-text">Faster onboarding</span><span class="impact__label">of new AI solutions across teams</span></li>
+            <li><span class="impact__kpi is-text">Less duplication</span><span class="impact__label">through shared, reusable accelerators</span></li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="cards">
+        <!-- Card 1 -->
+        <article class="card" data-reveal>
+          <div class="card__thumb" style="--g1:#d1653f;--g2:#7a2f18">
+            <span class="card__kpi">−$400K<small>/yr fraud loss</small></span>
+          </div>
+          <div class="card__body">
+            <div class="card__row">
+              <h3>Credit Risk &amp; Chargeback Fraud Detection</h3>
+              <span class="card__year mono co"><svg class="brandmark" aria-hidden="true"><use href="#ic-mastercard"></use></svg>Mastercard</span>
+            </div>
+            <p>Engineered an ML model to score credit risk and flag chargeback fraud in real time -
+               cutting fraud-related losses by 7% and saving $400,000 annually.</p>
+            <ul class="tags mono"><li>ML</li><li>Risk</li><li>Fraud</li><li>Python</li></ul>
+            <span class="card__status mono">● Delivered</span>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card" data-reveal>
+          <div class="card__thumb" style="--g1:#5b8266;--g2:#274233">
+            <span class="card__kpi">−80%<small>review time</small></span>
+          </div>
+          <div class="card__body">
+            <div class="card__row">
+              <h3>LLM + RAG Case Evaluator</h3>
+              <span class="card__year mono co"><span class="co__badge">S</span>Scaler</span>
+            </div>
+            <p>Built a retrieval-augmented evaluator that automates case reviews - reducing review
+               time by 80% while improving grading accuracy by 15%.</p>
+            <ul class="tags mono"><li>LLM</li><li>RAG</li><li>LangChain</li><li>NLP</li></ul>
+            <span class="card__status mono">● Delivered</span>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card" data-reveal>
+          <div class="card__thumb" style="--g1:#c9a24b;--g2:#6f5416">
+            <span class="card__kpi">+$9K<small>/mo revenue</small></span>
+          </div>
+          <div class="card__body">
+            <div class="card__row">
+              <h3>Cardiovascular Risk Prediction</h3>
+              <span class="card__year mono co"><span class="co__badge">ZS</span>ZS Associates</span>
+            </div>
+            <p>Designed an ML system for early cardiovascular disease detection - improving patient
+               outcomes and lifting client revenue by $9,000 per month.</p>
+            <ul class="tags mono"><li>Healthcare</li><li>Classification</li><li>ML</li></ul>
+            <span class="card__status mono">● Delivered</span>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="card" data-reveal>
+          <div class="card__thumb" style="--g1:#6f6bd1;--g2:#332f7a">
+            <span class="card__kpi">$110K<small>/mo saved</small></span>
+          </div>
+          <div class="card__body">
+            <div class="card__row">
+              <h3>Procurement Optimization</h3>
+              <span class="card__year mono co"><span class="co__badge">GT</span>GroundTruth</span>
+            </div>
+            <p>Surfaced financial and operational inefficiencies across procurement, driving
+               $110K in monthly savings through optimized sourcing strategies.</p>
+            <ul class="tags mono"><li>Analytics</li><li>Optimization</li><li>SQL</li></ul>
+            <span class="card__status mono">● Delivered</span>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="card" data-reveal>
+          <div class="card__thumb" style="--g1:#4b93c9;--g2:#1c4a6f">
+            <span class="card__kpi">−60%<small>manual effort</small></span>
+          </div>
+          <div class="card__body">
+            <div class="card__row">
+              <h3>Analytics Workflow Automation</h3>
+              <span class="card__year mono co"><span class="co__badge">ZD</span>Ziff Davis · Nasdaq</span>
+            </div>
+            <p>Built scalable automated workflows that cut manual effort by 60%, saved 70 hours
+               a month, and lifted quarterly profit by 8%.</p>
+            <ul class="tags mono"><li>ETL</li><li>Automation</li><li>Boto3</li></ul>
+            <span class="card__status mono">● Delivered</span>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="card" data-reveal>
+          <div class="card__thumb" style="--g1:#c95b7a;--g2:#6f1c37">
+            <span class="card__kpi">−75%<small>turnaround</small></span>
+          </div>
+          <div class="card__body">
+            <div class="card__row">
+              <h3>NLP + LLM Support Automation</h3>
+              <span class="card__year mono co"><svg class="brandmark" aria-hidden="true"><use href="#ic-mastercard"></use></svg>Mastercard</span>
+            </div>
+            <p>Deployed AI chatbots and an NLP ticket-classification system - cutting turnaround
+               by 75%+ and resolution time by 55% across internal workflows.</p>
+            <ul class="tags mono"><li>NLP</li><li>LLM</li><li>Chatbot</li><li>MLOps</li></ul>
+            <span class="card__status mono">● Delivered</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ WHAT I DO ============ -->
+    <section class="section craft" id="craft">
+      <div class="section__head">
+        <p class="eyebrow mono" data-reveal>What I Do</p>
+        <h2 class="section__title" data-reveal>Three ways I create value.</h2>
+      </div>
+
+      <ol class="rows" role="list">
+        <li class="row" data-reveal>
+          <span class="row__num mono">01</span>
+          <h3 class="row__title">Applied ML &amp; Generative AI</h3>
+          <p class="row__desc">I ship production systems - fraud detection, RAG evaluators, NLP
+             classifiers, predictive analytics - that are measured in dollars and hours, not demos.</p>
+        </li>
+        <li class="row" data-reveal>
+          <span class="row__num mono">02</span>
+          <h3 class="row__title">Teaching &amp; Enablement</h3>
+          <p class="row__desc">Top-rated instructor for <span class="co"><svg class="brandmark" aria-hidden="true"><use href="#ic-google"></use></svg>Google for Startups</span>. I've trained 120,000+
+             learners and designed corporate programs for <span class="co"><svg class="brandmark" aria-hidden="true"><use href="#ic-barclays"></use></svg>Barclays</span> and <span class="co"><svg class="brandmark" aria-hidden="true"><use href="#ic-amex"></use></svg>American Express</span>.</p>
+        </li>
+        <li class="row" data-reveal>
+          <span class="row__num mono">03</span>
+          <h3 class="row__title">Advisory &amp; Consulting</h3>
+          <p class="row__desc">Guest lecturer and hackathon judge across the IIMs and IITs. I help
+             teams turn ambiguous AI ambitions into scoped, shippable roadmaps.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ EXPERIENCE / PATH ============ -->
+    <section class="section path" id="experience">
+      <div class="section__head">
+        <p class="eyebrow mono" data-reveal>The Path</p>
+        <h2 class="section__title" data-reveal>Where I've been building.</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="tl__item" data-reveal>
+          <span class="tl__marker" aria-hidden="true"></span>
+          <div class="tl__meta mono"><span class="tl__now">Now</span> · Manager - AI Center of Excellence</div>
+          <h3 class="tl__role co"><svg class="brandmark" aria-hidden="true"><use href="#ic-mastercard"></use></svg>Mastercard</h3>
+          <p class="tl__desc">Leading AI CoE - chatbots (NLP + LLMs), ticket-classification systems,
+             and automated data workflows across SQL, ETL and ML pipelines.</p>
+        </div>
+        <div class="tl__item" data-reveal>
+          <span class="tl__marker" aria-hidden="true"></span>
+          <div class="tl__meta mono">Senior Manager · Data Science</div>
+          <h3 class="tl__role co"><span class="co__badge">S</span>Scaler</h3>
+          <p class="tl__desc">LLM + RAG evaluators, personalization chatbots (+40% engagement),
+             AWS Athena reporting (−90% query time), and ML lead-scoring models.</p>
+        </div>
+        <div class="tl__item" data-reveal>
+          <span class="tl__marker" aria-hidden="true"></span>
+          <div class="tl__meta mono">Guest Lecturer · Low-Code Analytics</div>
+          <h3 class="tl__role co"><span class="co__badge">IIM</span>IIM Indore</h3>
+          <p class="tl__desc">Designed a Dataiku DSS module for 100+ students, mentored 75% of the
+             cohort to certification, and lifted placements by 20%.</p>
+        </div>
+        <div class="tl__item" data-reveal>
+          <span class="tl__marker" aria-hidden="true"></span>
+          <div class="tl__meta mono">Education</div>
+          <div class="tl__edu">
+            <p><strong>IIIT Bangalore</strong> - PGD, Data Science &amp; Machine Learning</p>
+            <p><strong>Maharaja Agrasen Institute of Technology (MAIT)</strong> - B.Tech, Information Technology</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RECOGNITION & CREDENTIALS ============ -->
+    <section class="section creds" id="recognition">
+      <div class="section__head">
+        <p class="eyebrow mono" data-reveal>Recognition &amp; Credentials</p>
+        <h2 class="section__title" data-reveal>Trusted to build, teach &amp; judge.</h2>
+      </div>
+
+      <div class="creds__grid">
+        <article class="cred" data-reveal>
+          <span class="cred__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14.5 6.7 21.5 12 18.7l5.3 2.8-1.8-7"/><path d="m9.4 9 1.9 1.9L15 7.2"/></svg>
+          </span>
+          <h3 class="cred__title">Certified Practitioner</h3>
+          <p class="cred__desc"><strong>AWS Certified AI Practitioner</strong>, <strong>Tableau Certified Data Scientist</strong> and <strong>Dataiku Core Designer</strong> (ML &amp; Generative AI Practitioner). Delivering data-driven solutions, scalable ML/AI systems, and impactful visualizations for better decision-making.</p>
+        </article>
+
+        <article class="cred" data-reveal>
+          <span class="cred__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M12 16v4M8.5 20h7M7 8.5h10M7 12h6"/></svg>
+          </span>
+          <h3 class="cred__title">Guest Lecturer</h3>
+          <p class="cred__desc">Delivering sessions on AI, Machine Learning, and Data Science applications at premier institutions including <strong>IIM Indore</strong>, <strong>VIT</strong>, <strong>SRM</strong>, and <strong>Delhi University</strong>.</p>
+        </article>
+
+        <article class="cred" data-reveal>
+          <span class="cred__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M7 20h10M5 8h14"/><path d="M5 8 3 13a3 3 0 0 0 6 0L7 8M19 8l-2 5a3 3 0 0 0 6 0l-2-5"/></svg>
+          </span>
+          <h3 class="cred__title">Invited Judge</h3>
+          <p class="cred__desc">Judging leading analytics events and hackathons across <strong>IIT Delhi</strong>, <strong>IIM Lucknow</strong>, <strong>IIM Amritsar</strong>, and <strong>Manipal University</strong>.</p>
+        </article>
+
+        <article class="cred" data-reveal>
+          <span class="cred__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h8l5 5v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z"/><path d="M14 2v5h5M9 12h6M9 16h6M9 8h2"/></svg>
+          </span>
+          <h3 class="cred__title">Published Research</h3>
+          <p class="cred__desc">Published in the <strong>International Journal for Scientific Research &amp; Development (IJSRD)</strong> - the Tree Overlay Network (T.O.N.), a decentralized network model for scalable peer-to-peer systems.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT + STACK ============ -->
+    <section class="section about" id="about">
+      <div class="about__grid">
+        <div class="about__col">
+          <p class="eyebrow mono" data-reveal>About</p>
+          <h2 class="about__lead" data-reveal>
+            I translate complex AI into <span class="accent">scalable business solutions</span>
+            and practical learning experiences.
+          </h2>
+          <p class="about__body" data-reveal>
+            My work lives at the intersection of research and revenue - building ML and Generative AI
+            that ships, and teaching the practitioners who build the next generation of it. Featured,
+            top-rated instructor for Google for Startups. Published researcher (IJSRD - the Tree Overlay
+            Network). Invited judge and guest lecturer across India's premier institutions.
+          </p>
+        </div>
+
+        <div class="about__col">
+          <p class="eyebrow mono" data-reveal>Tech Stack</p>
+          <dl class="stack" data-reveal>
+            <div><dt class="mono">Languages</dt><dd>Python · SQL</dd></div>
+            <div><dt class="mono">Machine Learning</dt><dd>Supervised &amp; Unsupervised · NLP · Deep Learning · Time Series</dd></div>
+            <div><dt class="mono">Generative AI</dt><dd>RAGs · AI Agents · Text &amp; Image Generation · LangChain</dd></div>
+            <div><dt class="mono">Viz &amp; BI</dt><dd>Tableau · Excel · Alteryx · Dataiku</dd></div>
+            <div><dt class="mono">MLOps</dt><dd>Git · Flask · Docker · AWS · MLflow</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA / CONTACT ============ -->
+    <section class="section cta" id="contact">
+      <div class="cta__inner" data-reveal>
+        <span class="cta__pulse" aria-hidden="true"></span>
+        <p class="eyebrow mono">Let's talk</p>
+        <h2 class="cta__title">Have an AI problem worth solving?</h2>
+        <p class="cta__sub">Consulting, corporate training, keynotes, or a hard ML build - I read every message.</p>
+        <div class="cta__actions">
+          <a href="mailto:mailbox.suraaj@gmail.com?subject=Let%27s%20work%20together" class="btn btn--primary">Email me <span aria-hidden="true">&rarr;</span></a>
+          <button id="copyEmail" class="btn btn--ghost" data-email="mailbox.suraaj@gmail.com">
+            <span class="copy__label">Copy email</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <span class="nav__dot" aria-hidden="true"></span>
+        suraaj.hasija
+        <p class="mono footer__loc">Machine Learning · Generative AI · Data Science</p>
+      </div>
+      <nav class="footer__nav mono" aria-label="Footer">
+        <a href="#work">Work</a>
+        <a href="#craft">What I Do</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer__social mono">
+        <a href="https://github.com/gitsuraaj" target="_blank" rel="noopener">GitHub &#8599;</a>
+        <a href="https://www.linkedin.com/in/suraajhasija" target="_blank" rel="noopener">LinkedIn &#8599;</a>
+        <a href="mailto:mailbox.suraaj@gmail.com">Email &#8599;</a>
+      </div>
+    </div>
+    <div class="footer__base mono">
+      <span>© <span id="year">2026</span> Suraaj Hasija</span>
+    </div>
+  </footer>
+
+  <!-- GSAP (deferred, non-blocking) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="main.js" defer></script>
+</body>
+</html>
